@@ -1,0 +1,15 @@
+
+name: "Teste"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  concat:
+    runs-on: windows-latest
+    steps:      
+      - uses: actions/checkout@v4
+      - name: "Print"
+        run: |
+          $dest = "contentPath=$SiteName,computerName=$authUrl,userName=`"${{ secrets.TEST_USER }}`",password=`"${{ secrets.TEST_PASSWORD }}`",authType=Basic"
+          Write-Host "DEST = $dest"
