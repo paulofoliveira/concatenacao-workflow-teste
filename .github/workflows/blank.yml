@@ -11,5 +11,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: "Print"
         run: |
-          $dest = "contentPath=$SiteName,computerName=$authUrl,userName=`"${{ secrets.TEST_USER }}`",password=`"${{ secrets.TEST_PASSWORD }}`",authType=Basic"
+
+          $Password = "${{ secrets.TEST_PASSWORD }}"
+          $dest = "contentPath=$SiteName,computerName=$authUrl,userName=`"${{ secrets.TEST_USER }}`",password=`"$Password`",authType=Basic"
           Write-Host "DEST = $dest"
