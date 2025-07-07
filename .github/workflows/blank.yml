@@ -12,9 +12,9 @@ jobs:
       - name: "Print"
         run: |
 
-          $Password = "${{ secrets.TEST_PASSWORD }}"
-          $dest = "contentPath=$SiteName,computerName=$authUrl,userName=`"${{ secrets.TEST_USER }}`",password=`"$Password`",authType=Basic"
+          $PasswordX = "${{ secrets.TEST_PASSWORD }}"
+          $dest = "contentPath=$SiteName,computerName=$authUrl,userName=`"${{ secrets.TEST_USER }}`",password=`"$PasswordX`",authType=Basic"
           $dest2 = "contentPath=$SiteName,computerName=$authUrl,userName=`"${{ secrets.TEST_USER }}`",password=`"${{ secrets.TEST_PASSWORD }}`",authType=Basic"
           
           Write-Host "DEST = $dest"
-          Write-Host "DEST = $dest2"
+          Write-Host "DEST2 = $dest2"
